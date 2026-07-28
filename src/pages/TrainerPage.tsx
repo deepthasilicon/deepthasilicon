@@ -56,11 +56,11 @@ export default function TrainerPage() {
             >
               <img
                 src={trainerImage}
-                alt="Siva Ram Chinthala"
+                alt="Shiva Ram Chinthala"
                 className="w-36 h-36 rounded-full object-cover border-2 border-primary-200 mb-4"
               />
               <h2 className="text-2xl sm:text-3xl font-bold text-primary-500 leading-tight">
-                Siva Ram Chinthala
+                Shiva Ram Chinthala
               </h2>
               <p className="text-secondary-500 font-medium text-sm mt-1 mb-5">
                 Director – Technical & Lead Trainer
