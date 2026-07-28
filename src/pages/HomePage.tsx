@@ -232,13 +232,13 @@ export default function HomePage() {
             <div className="flex items-center gap-5 mb-4">
               <div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-primary-500 leading-tight">
-                  Siva Ram Chinthala
+                  Shiva Ram Chinthala
                 </h2>
                 <p className="text-neutral-500 text-sm font-medium tracking-wide mt-1">Corporate Trainer | 15+ Years | ASIC Physical Design Expert</p>
               </div>
               <img
                 src={trainerImage}
-                alt="Siva Ram Chinthala"
+                alt="Shiva Ram Chinthala"
                 className="w-32 h-32 rounded-full object-cover border-2 border-primary-200"
               />
             </div>
