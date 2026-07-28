@@ -36,13 +36,29 @@ export default function ContactPage() {
     setCaptchaError(false);
   };
 
+  // Helper function to format the data for Netlify
+  const encode = (data: any) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  }
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
     if (parseInt(captchaInput) !== captcha.answer) {
       setCaptchaError(true);
       return;
     }
-    setSubmitted(true);
+
+    // Send the data to Netlify without refreshing the page
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...form })
+    })
+      .then(() => setSubmitted(true))
+      .catch((error) => console.error("Form submission error:", error));
   };
 
   useEffect(() => {
@@ -169,11 +185,16 @@ export default function ContactPage() {
                     <h3 className="text-xl font-bold text-primary-500">Send an Enquiry</h3>
                     <p className="text-sm text-neutral-500 mt-1">The course advisor will get back to you within 24 hrs.</p>
                   </div>
-                  <form onSubmit={handleSubmit} className="space-y-5" data-netlify="true">
+                  <form onSubmit={handleSubmit} name="contact" className="space-y-5" data-netlify="true">
+                    
+                    {/* Hidden input required by Netlify for React apps */}
+                    <input type="hidden" name="form-name" value="contact" />
+
                     <div>
                       <label className="block text-sm font-medium text-neutral-700 mb-1.5">Full Name *</label>
                       <input
                         type="text"
+                        name="name"
                         required
                         value={form.name}
                         onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -186,6 +207,7 @@ export default function ContactPage() {
                         <label className="block text-sm font-medium text-neutral-700 mb-1.5">Email *</label>
                         <input
                           type="email"
+                          name="email"
                           required
                           value={form.email}
                           onChange={(e) => setForm({ ...form, email: e.target.value })}
@@ -197,6 +219,7 @@ export default function ContactPage() {
                         <label className="block text-sm font-medium text-neutral-700 mb-1.5">Contact Number *</label>
                         <input
                           type="tel"
+                          name="phone"
                           required
                           value={form.phone}
                           onChange={(e) => setForm({ ...form, phone: e.target.value })}
@@ -208,6 +231,7 @@ export default function ContactPage() {
                     <div>
                       <label className="block text-sm font-medium text-neutral-700 mb-1.5">Qualification *</label>
                       <select
+                        name="qualification"
                         required
                         value={form.qualification}
                         onChange={(e) => setForm({ ...form, qualification: e.target.value })}
@@ -223,6 +247,7 @@ export default function ContactPage() {
                       <label className="block text-sm font-medium text-neutral-700 mb-1.5">Year of Graduation *</label>
                       <input
                         type="number"
+                        name="graduationYear"
                         required
                         min="1980"
                         max="2035"
@@ -235,6 +260,7 @@ export default function ContactPage() {
                     <div>
                       <label className="block text-sm font-medium text-neutral-700 mb-1.5">Message (Optional)</label>
                       <textarea
+                        name="message"
                         rows={4}
                         value={form.message}
                         onChange={(e) => setForm({ ...form, message: e.target.value })}
