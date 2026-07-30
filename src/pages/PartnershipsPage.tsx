@@ -199,13 +199,16 @@ export default function PartnershipsPage() {
               Please include your organization details and collaboration requirements. We look forward to building a successful partnership with you.
             </p>
             <a
-              href="mailto:collaborations@deepthasilicon.com"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white font-semibold px-6 py-3.5 rounded-xl text-base transition-all hover:scale-[1.02] shadow-lg"
-            >
-              <Mail className="w-5 h-5 flex-shrink-0" />
-              <span className="whitespace-nowrap">collaborations@deepthasilicon.com</span>
-              <ArrowRight className="w-4 h-4 flex-shrink-0" />
-            </a>
+  href="mailto:collaborations@deepthasilicon.com"
+  /* Added min-w-0 to the flex container */
+  className="w-full min-w-0 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-secondary-500 to-secondary-600 hover:from-secondary-600 hover:to-secondary-700 text-white font-semibold px-4 py-3.5 rounded-xl text-base transition-all hover:scale-[1.02] shadow-lg"
+>
+  <Mail className="w-5 h-5 flex-shrink-0" />
+  {/* Changed to truncate */}
+  <span className="truncate">collaborations@deepthasilicon.com</span>
+  <ArrowRight className="w-4 h-4 flex-shrink-0" />
+</a>
+
           </motion.div>
         </div>
       </section>
