@@ -115,13 +115,15 @@ export default function PartnershipsPage() {
             </p>
 <a
   href="mailto:collaborations@deepthasilicon.com"
-  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-secondary-500 to-secondary-600 hover:from-secondary-600 hover:to-secondary-700 text-white font-semibold px-6 py-3.5 rounded-xl text-base transition-all hover:scale-[1.02] shadow-lg"
+  /* Added min-w-0 to the flex container */
+  className="w-full min-w-0 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-secondary-500 to-secondary-600 hover:from-secondary-600 hover:to-secondary-700 text-white font-semibold px-4 py-3.5 rounded-xl text-base transition-all hover:scale-[1.02] shadow-lg"
 >
   <Mail className="w-5 h-5 flex-shrink-0" />
-  {/* Replaced whitespace-nowrap with break-all */}
-  <span className="break-all text-center">collaborations@deepthasilicon.com</span>
+  {/* Changed to truncate */}
+  <span className="truncate">collaborations@deepthasilicon.com</span>
   <ArrowRight className="w-4 h-4 flex-shrink-0" />
 </a>
+
 
 
           </motion.div>
