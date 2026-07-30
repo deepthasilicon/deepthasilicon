@@ -114,13 +114,15 @@ export default function PartnershipsPage() {
               Please include your institution details and collaboration requirements. Our team will review your request and respond at the earliest.
             </p>
             <a
-              href="mailto:collaborations@deepthasilicon.com"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-secondary-500 to-secondary-600 hover:from-secondary-600 hover:to-secondary-700 text-white font-semibold px-6 py-3.5 rounded-xl text-base transition-all hover:scale-[1.02] shadow-lg"
-            >
-              <Mail className="w-5 h-5 flex-shrink-0" />
-              <span className="whitespace-nowrap">collaborations@deepthasilicon.com</span>
-              <ArrowRight className="w-4 h-4 flex-shrink-0" />
-            </a>
+  href="mailto:collaborations@deepthasilicon.com"
+  /* Changed w-full to w-fit */
+  className="w-fit sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-secondary-500 to-secondary-600 hover:from-secondary-600 hover:to-secondary-700 text-white font-semibold px-6 py-3.5 rounded-xl text-base transition-all hover:scale-[1.02] shadow-lg max-w-[95vw]"
+>
+  <Mail className="w-5 h-5 flex-shrink-0" />
+  <span className="whitespace-nowrap">collaborations@deepthasilicon.com</span>
+  <ArrowRight className="w-4 h-4 flex-shrink-0" />
+</a>
+
           </motion.div>
         </div>
       </section>
