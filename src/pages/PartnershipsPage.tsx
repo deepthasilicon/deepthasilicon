@@ -115,14 +115,14 @@ export default function PartnershipsPage() {
             </p>
 <a
   href="mailto:collaborations@deepthasilicon.com"
-  /* Reduced mobile padding (px-3) and scaled up on sm screens (sm:px-6) */
-  className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-secondary-500 to-secondary-600 hover:from-secondary-600 hover:to-secondary-700 text-white font-semibold px-3 sm:px-6 py-3.5 rounded-xl transition-all hover:scale-[1.02] shadow-lg"
+  className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-secondary-500 to-secondary-600 hover:from-secondary-600 hover:to-secondary-700 text-white font-semibold px-4 py-3.5 rounded-xl text-base transition-all hover:scale-[1.02] shadow-lg"
 >
-  <Mail className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
-  {/* Shrunk text size for mobile, regular size for sm+ */}
-  <span className="whitespace-nowrap text-xs sm:text-base">collaborations@deepthasilicon.com</span>
-  <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+  <Mail className="w-5 h-5 flex-shrink-0" />
+  {/* Changed to break-all and added text-center */}
+  <span className="break-all text-center">collaborations@deepthasilicon.com</span>
+  <ArrowRight className="w-4 h-4 flex-shrink-0" />
 </a>
+
 
 
 
@@ -204,7 +204,7 @@ export default function PartnershipsPage() {
   className="w-full min-w-0 sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white font-semibold px-6 py-3.5 rounded-xl text-base transition-all hover:scale-[1.02] shadow-lg"
 >
   <Mail className="w-5 h-5 flex-shrink-0" />
-  <span className="truncate">collaborations@deepthasilicon.com</span>
+  <span className="break-all text-center">collaborations@deepthasilicon.com</span>
   <ArrowRight className="w-4 h-4 flex-shrink-0" />
 </a>
 
