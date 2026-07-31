@@ -73,7 +73,7 @@ export default function Footer() {
               <span className="text-base font-bold">Deeptha Silicon Technologies</span>
             </div>
             <p className="text-base text-white/60 leading-relaxed mb-4">
-              From Academia to Industry Readiness. A purpose-driven VLSI training committed to building industry-ready semiconductor professionals.
+              If you have the passion, we have the pathway. A purpose-driven VLSI training committed to building industry-ready semiconductor professionals.
             </p>
             <div className="flex items-center gap-3">
               <a
