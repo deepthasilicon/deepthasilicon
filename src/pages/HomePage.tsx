@@ -100,7 +100,7 @@ export default function HomePage() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="mt-4 sm:mt-6 text-lg sm:text-2xl text-white/90 font-semibold max-w-xl"
             >
-              From Academia to Industry Readiness
+              If you have the passion, we have the pathway.
             </motion.p>
 
             <motion.p
