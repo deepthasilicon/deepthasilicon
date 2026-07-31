@@ -127,6 +127,7 @@ export default function PartnershipsPage() {
 
 
 
+
           </motion.div>
         </div>
       </section>
